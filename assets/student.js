@@ -31,7 +31,7 @@ function showMessage(node, text, type = "info") {
 function hideMessage(node) { node.hidden = true; }
 function resetSelection() {
   selectedCity = "";
-  selectedCityLabel.textContent = "Aún no has seleccionado una sede";
+  selectedCityLabel.textContent = "Selecciona Quito o Manta";
   confirmBtn.disabled = true;
   document.querySelectorAll("[data-city]").forEach(card => {
     card.classList.remove("selected");
