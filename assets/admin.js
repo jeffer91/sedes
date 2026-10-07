@@ -6,8 +6,7 @@ import {
   collection, query, where, getDocs, onSnapshot, doc, updateDoc, serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 import {
-  signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider,
-  signOut, onAuthStateChanged
+  signInWithEmailAndPassword, signOut, onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 
 const el = (id) => document.getElementById(id);
@@ -29,8 +28,15 @@ function showMessage(node, text, type = "info") {
   node.hidden = false;
 }
 function hideMessage(node) { node.hidden = true; }
-function isInstitutional(email = "") {
-  return email.toLowerCase().endsWith("@itsqmet.edu.ec");
+const ADMIN_USER = "0401135306";
+const ADMIN_EMAIL = ADMIN_USER + "@itsqmet.edu.ec";
+
+function isAuthorizedAdmin(email = "") {
+  return email.toLowerCase() === ADMIN_EMAIL.toLowerCase();
+}
+
+function firebasePasswordFromPin(pin) {
+  return "UTET-" + pin;
 }
 function escapeHtml(value = "") {
   return String(value).replace(/[&<>"']/g, c => ({
@@ -46,31 +52,42 @@ function normalize(value = "") { return String(value).toLowerCase().normalize("N
 el("loginForm").addEventListener("submit", async (event) => {
   event.preventDefault();
   hideMessage(loginMessage);
-  const email = el("adminEmail").value.trim();
-  const password = el("adminPassword").value;
-  if (!isInstitutional(email)) {
-    showMessage(loginMessage, "Utiliza un correo institucional @itsqmet.edu.ec.", "error");
+
+  const user = String(el("adminUser").value || "").replace(/\D/g, "").slice(0, 10);
+  const pin = String(el("adminPin").value || "").replace(/\D/g, "").slice(0, 4);
+
+  el("adminUser").value = user;
+  el("adminPin").value = pin;
+
+  if (user !== ADMIN_USER || !/^\d{4}$/.test(pin)) {
+    showMessage(loginMessage, "Usuario o PIN incorrecto.", "error");
     return;
   }
+
   el("loginBtn").disabled = true;
-  el("loginBtn").textContent = "Ingresando…";
+  el("loginBtn").textContent = "Validando…";
+
   try {
-    await signInWithEmailAndPassword(auth, email, password);
+    await signInWithEmailAndPassword(auth, ADMIN_EMAIL, firebasePasswordFromPin(pin));
   } catch (error) {
-    showMessage(loginMessage, friendlyFirebaseError(error), "error");
+    console.error(error);
+    showMessage(
+      loginMessage,
+      "No fue posible validar el acceso. Verifica el usuario, el PIN y la cuenta administrativa configurada en Firebase.",
+      "error"
+    );
   } finally {
     el("loginBtn").disabled = false;
-    el("loginBtn").textContent = "Ingresar";
+    el("loginBtn").textContent = "Ingresar al panel";
   }
 });
 
-el("googleLoginBtn").addEventListener("click", async () => {
-  hideMessage(loginMessage);
-  try {
-    await signInWithPopup(auth, new GoogleAuthProvider());
-  } catch (error) {
-    showMessage(loginMessage, friendlyFirebaseError(error), "error");
-  }
+el("adminUser").addEventListener("input", (event) => {
+  event.target.value = String(event.target.value || "").replace(/\D/g, "").slice(0, 10);
+});
+
+el("adminPin").addEventListener("input", (event) => {
+  event.target.value = String(event.target.value || "").replace(/\D/g, "").slice(0, 4);
 });
 
 el("logoutBtn").addEventListener("click", () => signOut(auth));
@@ -82,14 +99,14 @@ onAuthStateChanged(auth, async (user) => {
     dashboardView.hidden = true;
     return;
   }
-  if (!isInstitutional(user.email || "")) {
+  if (!isAuthorizedAdmin(user.email || "")) {
     await signOut(auth);
-    showMessage(loginMessage, "La cuenta autenticada no pertenece al dominio institucional @itsqmet.edu.ec.", "error");
+    showMessage(loginMessage, "Esta cuenta no está autorizada para administrar la selección de sede.", "error");
     return;
   }
   loginView.hidden = true;
   dashboardView.hidden = false;
-  el("adminUserEmail").textContent = user.email;
+  el("adminUserEmail").textContent = "Administrador · " + ADMIN_USER;
   await loadEligibility();
   listenResponses();
 });

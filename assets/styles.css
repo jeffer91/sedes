@@ -1375,3 +1375,226 @@
   .v3-success-footer .v3-btn{width:100%}
   .v3-footer{flex-direction:column}
 }
+
+
+/* =========================================================
+   Admin V3 — login por usuario + PIN, identidad ITSQMET
+   ========================================================= */
+.admin-v3{
+  --admin-navy:#101B2B;
+  --admin-navy-2:#1E3148;
+  --admin-gold:#C6A15B;
+  --admin-gold-soft:#E9D9B5;
+  --admin-ivory:#F6F3EC;
+  background:#F2F4F7;
+  color:#172033;
+}
+.admin-login-shell{
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  padding:26px;
+  background:
+    radial-gradient(circle at 50% 0%,rgba(198,161,91,.13),transparent 28%),
+    linear-gradient(180deg,#EFF2F5 0%,#F8F7F3 100%);
+}
+.admin-login-card{
+  width:min(100%,430px);
+  border:1px solid #DED7CA;
+  border-radius:22px;
+  background:#fff;
+  box-shadow:0 24px 70px rgba(16,27,43,.13);
+  overflow:hidden;
+}
+.admin-login-brand{
+  height:92px;
+  padding:14px 24px;
+  background:var(--admin-navy);
+  border-top:4px solid var(--admin-gold);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.admin-login-logo{
+  display:block;
+  max-width:100%;
+  width:auto;
+  height:64px;
+  object-fit:contain;
+}
+.admin-login-copy{
+  padding:25px 28px 13px;
+  text-align:center;
+}
+.admin-login-kicker{
+  display:block;
+  color:#8B6B2B;
+  font-size:8.5px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+}
+.admin-login-copy h1{
+  margin:6px 0 0;
+  color:var(--admin-navy);
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:31px;
+  line-height:1;
+  font-weight:500;
+}
+.admin-login-copy p{
+  margin:9px auto 0;
+  max-width:330px;
+  color:#667085;
+  font-size:11px;
+  line-height:1.5;
+}
+.admin-pin-form{
+  padding:8px 28px 24px;
+}
+.admin-pin-form label{
+  display:block;
+  margin:13px 0 6px;
+  color:#475467;
+  font-size:9px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.admin-auth-field{
+  height:44px;
+  display:grid;
+  grid-template-columns:42px 1fr;
+  overflow:hidden;
+  border:1px solid #D0D5DD;
+  border-radius:11px;
+  background:#fff;
+}
+.admin-auth-field:focus-within{
+  border-color:#AA8A4A;
+  box-shadow:0 0 0 4px rgba(198,161,91,.12);
+}
+.admin-auth-field>span{
+  display:grid;
+  place-items:center;
+  background:#F8F6F1;
+  border-right:1px solid #E7E1D6;
+  color:#8A7D66;
+  font-size:9px;
+  font-weight:900;
+}
+.admin-auth-field input{
+  width:100%;
+  min-width:0;
+  border:0;
+  outline:0;
+  padding:0 12px;
+  color:var(--admin-navy);
+  background:#fff;
+  font-size:13px;
+}
+.admin-login-btn{
+  width:100%;
+  min-height:44px;
+  margin-top:18px;
+  border:1px solid #D5B66E;
+  border-radius:11px;
+  background:var(--admin-gold);
+  color:#182231;
+  font-size:11px;
+  font-weight:900;
+  cursor:pointer;
+}
+.admin-login-btn:hover:not(:disabled){background:#D1AE65}
+.admin-login-btn:disabled{opacity:.55;cursor:not-allowed}
+.admin-login-message{
+  margin:0 28px 18px;
+}
+.admin-login-security{
+  min-height:42px;
+  padding:11px 20px;
+  border-top:1px solid #ECE7DD;
+  background:var(--admin-ivory);
+  color:#7D7465;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  font-size:8.5px;
+  text-align:center;
+}
+.admin-login-lock{color:#9A7A3B}
+
+.admin-v3-header{
+  height:66px;
+  background:var(--admin-navy);
+  border-top:3px solid var(--admin-gold);
+  color:#fff;
+  box-shadow:0 8px 24px rgba(16,27,43,.12);
+}
+.admin-v3-header-inner{
+  width:min(calc(100% - 32px),1180px);
+  height:100%;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.admin-v3-brand{
+  display:flex;
+  align-items:center;
+  gap:13px;
+}
+.admin-v3-logo{
+  height:49px;
+  width:auto;
+  max-width:250px;
+  object-fit:contain;
+}
+.admin-v3-brand>div{
+  padding-left:13px;
+  border-left:1px solid rgba(255,255,255,.15);
+  display:flex;
+  flex-direction:column;
+}
+.admin-v3-brand span{
+  color:#AEB7C3;
+  font-size:8px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+}
+.admin-v3-brand strong{
+  margin-top:3px;
+  font-size:11px;
+}
+.admin-v3 .admin-user{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#D0D5DD;
+  font-size:10px;
+}
+.admin-v3-logout{
+  min-height:34px;
+  padding:0 12px;
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:9px;
+  background:rgba(255,255,255,.04);
+  color:#fff;
+  font-size:9px;
+  font-weight:850;
+  cursor:pointer;
+}
+.admin-v3-logout:hover{background:rgba(255,255,255,.09)}
+
+@media(max-width:640px){
+  .admin-login-shell{padding:14px}
+  .admin-login-copy{padding:22px 20px 10px}
+  .admin-pin-form{padding:7px 20px 22px}
+  .admin-login-message{margin-left:20px;margin-right:20px}
+  .admin-v3-logo{height:40px;max-width:60vw}
+  .admin-v3-brand>div{display:none}
+  .admin-v3-header-inner{width:min(calc(100% - 20px),1180px)}
+}

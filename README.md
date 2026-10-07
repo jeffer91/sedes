@@ -31,3 +31,14 @@ Para seguridad real también deben aplicarse las reglas de Firestore del archivo
 ## Publicación
 
 Cada push a `main` despliega automáticamente GitHub Pages mediante `.github/workflows/pages.yml`.
+
+
+### Acceso administrativo por usuario y PIN
+
+La interfaz administrativa utiliza el usuario institucional configurado en la aplicación y valida el PIN mediante Firebase Authentication.
+
+Cuenta Firebase requerida:
+- Email de autenticación: `0401135306@itsqmet.edu.ec`
+- La contraseña de Firebase debe seguir el formato interno `UTET-<PIN>`.
+
+El PIN no se almacena literalmente en el código fuente. La cuenta debe existir en Firebase Authentication para que el acceso funcione.
