@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Administración · Selección de sede | ITSQMET</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body class="admin-page">
+  <section id="loginView" class="login-shell">
+    <div class="login-card">
+      <div class="shield large">I</div>
+      <p class="eyebrow">ITSQMET · Acceso administrativo</p>
+      <h1>Panel de selección de sede</h1>
+      <p class="muted">Ingresa con una cuenta institucional autorizada para revisar los registros de Quito y Manta.</p>
+
+      <form id="loginForm" class="login-form">
+        <label>Correo institucional
+          <input id="adminEmail" type="email" autocomplete="username" placeholder="usuario@itsqmet.edu.ec" required>
+        </label>
+        <label>Contraseña
+          <input id="adminPassword" type="password" autocomplete="current-password" placeholder="••••••••" required>
+        </label>
+        <button class="btn btn-primary full" type="submit" id="loginBtn">Ingresar</button>
+      </form>
+      <div class="login-separator"><span>o</span></div>
+      <button class="btn btn-secondary full" id="googleLoginBtn" type="button">Ingresar con Google institucional</button>
+      <div id="loginMessage" class="message" hidden></div>
+      <small class="security-note">El acceso administrativo requiere autenticación de Firebase y correo institucional @itsqmet.edu.ec.</small>
+    </div>
+  </section>
+
+  <div id="dashboardView" hidden>
+    <header class="admin-header">
+      <div class="institution">
+        <div class="shield">I</div>
+        <div class="brand-copy"><strong>ITSQMET</strong><span>Selección de sede · Complexivo</span></div>
+      </div>
+      <div class="admin-user">
+        <span id="adminUserEmail">—</span>
+        <button class="btn btn-ghost" id="logoutBtn">Cerrar sesión</button>
+      </div>
+    </header>
+
+    <main class="admin-shell">
+      <section class="dashboard-title">
+        <div>
+          <p class="eyebrow">Panel administrativo</p>
+          <h1>Registro de sede del examen complexivo</h1>
+          <p class="muted">Período Abril 2026 a Septiembre 2026 · Actualización en tiempo real</p>
+        </div>
+        <div class="dashboard-actions">
+          <button class="btn btn-secondary" id="refreshBtn">Actualizar</button>
+          <button class="btn btn-primary" id="exportBtn">Exportar CSV</button>
+        </div>
+      </section>
+
+      <section class="stats-grid">
+        <article class="stat-card"><span>Respuestas</span><strong id="statResponses">0</strong><small>registros confirmados</small></article>
+        <article class="stat-card stat-quito"><span>Quito</span><strong id="statQuito">0</strong><small id="pctQuito">0%</small></article>
+        <article class="stat-card stat-manta"><span>Manta</span><strong id="statManta">0</strong><small id="pctManta">0%</small></article>
+        <article class="stat-card"><span>Pendientes</span><strong id="statPending">—</strong><small id="pendingNote">según matrícula disponible</small></article>
+      </section>
+
+      <section class="panel admin-panel">
+        <div class="toolbar">
+          <div class="search-field">
+            <label for="searchInput">Buscar</label>
+            <input id="searchInput" placeholder="Nombre, cédula o carrera">
+          </div>
+          <div>
+            <label for="cityFilter">Elección</label>
+            <select id="cityFilter">
+              <option value="">Todas</option>
+              <option value="Quito">Quito</option>
+              <option value="Manta">Manta</option>
+            </select>
+          </div>
+          <div>
+            <label for="careerFilter">Carrera</label>
+            <select id="careerFilter"><option value="">Todas las carreras</option></select>
+          </div>
+          <div>
+            <label for="statusFilter">Estado</label>
+            <select id="statusFilter">
+              <option value="responses">Respondieron</option>
+              <option value="pending">Pendientes</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="dataMessage" class="message" hidden></div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Estudiante</th>
+                <th>Cédula</th>
+                <th>Carrera</th>
+                <th>Sede académica</th>
+                <th>Elección</th>
+                <th>Fecha</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="recordsBody"></tbody>
+          </table>
+          <div id="emptyTable" class="empty-table" hidden>No hay registros para los filtros seleccionados.</div>
+        </div>
+
+        <div class="table-footer">
+          <span id="tableCount">0 registros</span>
+          <span id="eligibilityStatus">Base de elegibles: verificando…</span>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="editDialog" class="confirm-dialog">
+    <form method="dialog">
+      <p class="eyebrow">Corrección administrativa</p>
+      <h2 id="editStudentName">—</h2>
+      <p>Selecciona la sede correcta. Este cambio quedará marcado como modificación administrativa.</p>
+      <div class="city-grid mini">
+        <button type="button" class="city-card" data-edit-city="Quito"><span class="city-icon">Q</span><span class="city-info"><strong>Quito</strong></span></button>
+        <button type="button" class="city-card" data-edit-city="Manta"><span class="city-icon">M</span><span class="city-info"><strong>Manta</strong></span></button>
+      </div>
+      <div class="dialog-actions">
+        <button value="cancel" class="btn btn-secondary">Cancelar</button>
+        <button value="confirm" class="btn btn-primary" id="saveEditBtn" disabled>Guardar cambio</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script type="module" src="../assets/admin.js"></script>
+</body>
+</html>
