@@ -121,7 +121,7 @@ document.querySelectorAll("[data-city]").forEach(card => {
       item.classList.toggle("selected", active);
       item.setAttribute("aria-checked", String(active));
     });
-    selectedCityLabel.textContent = selectedCity;
+    selectedCityLabel.textContent = `Sede seleccionada: ${selectedCity}`;
     confirmBtn.disabled = false;
     hideMessage(saveMessage);
   });
