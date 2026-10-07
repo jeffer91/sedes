@@ -8,124 +8,107 @@
   <meta name="description" content="Registro de sede para el proceso de examen complexivo del ITSQMET.">
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
-<body class="student-page">
-  <header class="topbar">
-    <a class="institution" href="./" aria-label="ITSQMET">
-      <div class="shield">I</div>
-      <div class="brand-copy">
+<body class="student-page student-compact">
+  <header class="topbar student-topbar">
+    <a class="institution student-brand" href="./" aria-label="ITSQMET">
+      <div class="shield student-shield">I</div>
+      <div class="brand-copy student-brand-copy">
         <strong>ITSQMET</strong>
         <span>Instituto Superior Tecnológico Quito Metropolitano</span>
       </div>
     </a>
-    <div class="process-pill">Titulación · Complexivo</div>
+    <div class="process-pill student-process">Complexivo · Selección de sede</div>
   </header>
 
-  <main class="student-shell">
-    <section class="hero-card">
-      <div class="hero-copy">
+  <main class="student-shell student-shell-compact">
+    <section class="student-hero-compact">
+      <div>
         <p class="eyebrow">Registro institucional</p>
-        <h1>Selecciona la sede para tu examen complexivo</h1>
-        <p class="lead">Consulta tus datos con tu número de cédula y registra si realizarás el proceso presencial en <strong>Quito</strong> o <strong>Manta</strong>.</p>
-        <div class="period-badge">
-          <span>Período</span>
-          <strong>Abril 2026 a Septiembre 2026</strong>
-        </div>
+        <h1>Selección de sede · Examen Complexivo</h1>
+        <p>Consulta tus datos y elige si realizarás el proceso presencial en <strong>Quito</strong> o <strong>Manta</strong>.</p>
       </div>
-      <div class="hero-graphic" aria-hidden="true">
-        <div class="city-dot city-dot-a"></div>
-        <div class="route-line"></div>
-        <div class="city-dot city-dot-b"></div>
-        <div class="route-labels"><span>Quito</span><span>Manta</span></div>
+      <div class="student-period-compact">
+        <span>Período</span>
+        <strong>Abril 2026 – Septiembre 2026</strong>
       </div>
     </section>
 
-    <section id="lookupPanel" class="panel lookup-panel">
-      <div class="panel-heading">
-        <div>
-          <p class="step">Paso 1</p>
-          <h2>Consulta tu información</h2>
+    <section id="lookupPanel" class="panel student-workflow-compact">
+      <div class="student-lookup-row">
+        <div class="student-step-title">
+          <span class="student-step-badge">1</span>
+          <div><strong>Consulta tu información</strong><small>Ingresa los 10 dígitos de tu cédula.</small></div>
         </div>
-        <span class="step-number">01</span>
+        <form id="lookupForm" class="lookup-form student-lookup-form" novalidate>
+          <label class="sr-only" for="cedula">Número de cédula</label>
+          <div class="input-row student-input-row">
+            <input id="cedula" name="cedula" inputmode="numeric" autocomplete="off" maxlength="10" placeholder="Número de cédula" aria-describedby="cedulaHelp">
+            <button class="btn btn-primary" type="submit" id="lookupBtn">Consultar</button>
+          </div>
+          <small id="cedulaHelp" class="sr-only">Ingresa los 10 dígitos de tu cédula.</small>
+        </form>
       </div>
 
-      <form id="lookupForm" class="lookup-form" novalidate>
-        <label for="cedula">Número de cédula</label>
-        <div class="input-row">
-          <input id="cedula" name="cedula" inputmode="numeric" autocomplete="off" maxlength="10" placeholder="Ej. 1723456789" aria-describedby="cedulaHelp">
-          <button class="btn btn-primary" type="submit" id="lookupBtn">Consultar</button>
-        </div>
-        <small id="cedulaHelp">Ingresa los 10 dígitos de tu cédula.</small>
-      </form>
-      <div id="lookupMessage" class="message" hidden></div>
-    </section>
+      <div id="lookupMessage" class="message student-message" hidden></div>
 
-    <section id="selectionPanel" class="panel selection-panel" hidden>
-      <div class="student-summary">
-        <div class="avatar" id="studentInitials">--</div>
-        <div>
-          <p class="eyebrow">Estudiante identificado</p>
-          <h2 id="studentName">—</h2>
-          <div class="student-meta">
-            <span id="studentId">—</span>
-            <span id="studentCareer">—</span>
-            <span id="studentAcademicCampus">—</span>
+      <div id="selectionPanel" class="student-selection-inline" hidden>
+        <div class="student-section-line"></div>
+
+        <div class="student-summary student-summary-compact">
+          <div class="avatar student-avatar-compact" id="studentInitials">--</div>
+          <div class="student-data-compact">
+            <p class="eyebrow">Estudiante identificado</p>
+            <h2 id="studentName">—</h2>
+            <div class="student-meta student-meta-compact">
+              <span id="studentId">—</span>
+              <span id="studentCareer">—</span>
+              <span id="studentAcademicCampus">—</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="divider"></div>
-
-      <div class="panel-heading compact">
-        <div>
-          <p class="step">Paso 2</p>
-          <h2>¿En qué ciudad deseas realizar el proceso?</h2>
-          <p class="muted">Selecciona una opción. Tu sede académica actual no limita esta elección.</p>
+        <div class="student-question-compact">
+          <span class="student-step-badge">2</span>
+          <div><strong>¿Dónde deseas realizar el proceso?</strong><small>Tu sede académica actual no limita esta elección.</small></div>
         </div>
-        <span class="step-number">02</span>
-      </div>
 
-      <div class="city-grid" role="radiogroup" aria-label="Sede del examen complexivo">
-        <button type="button" class="city-card" data-city="Quito" role="radio" aria-checked="false">
-          <span class="city-icon">Q</span>
-          <span class="city-info">
-            <strong>Quito</strong>
-            <small>Instituto Superior Tecnológico Quito Metropolitano</small>
-          </span>
-          <span class="checkmark">✓</span>
-        </button>
-        <button type="button" class="city-card" data-city="Manta" role="radio" aria-checked="false">
-          <span class="city-icon">M</span>
-          <span class="city-info">
-            <strong>Manta</strong>
-            <small>Sede Manta</small>
-          </span>
-          <span class="checkmark">✓</span>
-        </button>
-      </div>
-
-      <div class="confirmation-strip">
-        <div>
-          <span>Selección actual</span>
-          <strong id="selectedCityLabel">Aún no has seleccionado una sede</strong>
+        <div class="city-grid student-city-grid" role="radiogroup" aria-label="Sede del examen complexivo">
+          <button type="button" class="city-card student-city-card" data-city="Quito" role="radio" aria-checked="false">
+            <span class="city-icon student-city-icon">Q</span>
+            <span class="city-info"><strong>Quito</strong><small>ITSQMET · Quito</small></span>
+            <span class="checkmark">✓</span>
+          </button>
+          <button type="button" class="city-card student-city-card" data-city="Manta" role="radio" aria-checked="false">
+            <span class="city-icon student-city-icon">M</span>
+            <span class="city-info"><strong>Manta</strong><small>Sede Manta</small></span>
+            <span class="checkmark">✓</span>
+          </button>
         </div>
-        <button type="button" class="btn btn-primary" id="confirmBtn" disabled>Confirmar selección</button>
+
+        <div class="confirmation-strip student-confirmation-compact">
+          <div><span>Selección</span><strong id="selectedCityLabel">Aún no has seleccionado una sede</strong></div>
+          <button type="button" class="btn btn-primary" id="confirmBtn" disabled>Confirmar selección</button>
+        </div>
+        <div id="saveMessage" class="message student-message" hidden></div>
       </div>
-      <div id="saveMessage" class="message" hidden></div>
     </section>
 
-    <section id="registeredPanel" class="panel success-panel" hidden>
-      <div class="success-icon">✓</div>
-      <p class="eyebrow">Registro completado</p>
-      <h2>Tu selección quedó registrada</h2>
-      <p class="success-city" id="registeredCity">—</p>
-      <div class="receipt-grid">
+    <section id="registeredPanel" class="panel success-panel student-success-compact" hidden>
+      <div class="student-success-head">
+        <div class="success-icon student-success-icon">✓</div>
+        <div><p class="eyebrow">Registro completado</p><h2>Tu selección quedó registrada</h2></div>
+        <p class="success-city student-success-city" id="registeredCity">—</p>
+      </div>
+      <div class="receipt-grid student-receipt-compact">
         <div><span>Estudiante</span><strong id="registeredName">—</strong></div>
         <div><span>Cédula</span><strong id="registeredId">—</strong></div>
         <div><span>Período</span><strong>Abril 2026 a Septiembre 2026</strong></div>
         <div><span>Fecha de registro</span><strong id="registeredDate">—</strong></div>
       </div>
-      <p class="muted small">Si necesitas solicitar una corrección, comunícate con la Unidad de Titulación y Eficiencia Terminal.</p>
-      <button class="btn btn-secondary" type="button" id="newLookupBtn">Consultar otra cédula</button>
+      <div class="student-success-foot">
+        <p class="muted small">Para solicitar una corrección, comunícate con la Unidad de Titulación y Eficiencia Terminal.</p>
+        <button class="btn btn-secondary" type="button" id="newLookupBtn">Consultar otra cédula</button>
+      </div>
     </section>
   </main>
 
@@ -142,7 +125,7 @@
     </form>
   </dialog>
 
-  <footer class="footer">
+  <footer class="footer student-footer-compact">
     <span>ITSQMET · Unidad de Titulación y Eficiencia Terminal</span>
     <span>Registro institucional de sede</span>
   </footer>
