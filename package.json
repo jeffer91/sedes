@@ -1,0 +1,13 @@
+{
+  "name": "centro-estetico-web",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Sitio estático SEO-first para un centro estético con catálogo visual y una página individual por tratamiento.",
+  "scripts": {
+    "build": "node scripts/build-v2.js",
+    "dev": "node scripts/build-v2.js --watch"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

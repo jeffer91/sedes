@@ -1,0 +1,561 @@
+{
+  "site": {
+    "brand": "Centro Estético",
+    "tagline": "Belleza, cuidado y bienestar en cada detalle",
+    "description": "Centro estético con tratamientos faciales, corporales, capilares y masajes. Consulta servicios, precios y reserva tu cita por WhatsApp.",
+    "whatsappDisplay": "097 921 0617",
+    "whatsappInternational": "593979210617",
+    "country": "Ecuador",
+    "instagram": "",
+    "address": "",
+    "hours": "Atención con cita previa",
+    "baseUrl": "https://example.com"
+  },
+  "categories": [
+    {
+      "id": "faciales",
+      "name": "Tratamientos faciales",
+      "eyebrow": "Piel y rostro",
+      "description": "Protocolos orientados a limpieza, hidratación, textura, luminosidad y cuidado visible de la piel."
+    },
+    {
+      "id": "corporales",
+      "name": "Tratamientos corporales",
+      "eyebrow": "Silueta y bienestar",
+      "description": "Opciones para cuidado corporal, drenaje, apariencia de la piel y acompañamiento estético por zonas."
+    },
+    {
+      "id": "capilar",
+      "name": "Tratamiento capilar",
+      "eyebrow": "Cuidado del cuero cabelludo",
+      "description": "Protocolo combinado sujeto a valoración profesional para acompañar objetivos de cuidado capilar."
+    },
+    {
+      "id": "masajes",
+      "name": "Masajes y terapias relajantes",
+      "eyebrow": "Relajación y descanso",
+      "description": "Experiencias de masaje pensadas para disminuir tensión y ofrecer una pausa de bienestar."
+    },
+    {
+      "id": "paquetes",
+      "name": "Paquetes y experiencias",
+      "eyebrow": "Experiencias combinadas",
+      "description": "Combinaciones de cuidado facial, corporal y relajación en una sola experiencia."
+    }
+  ],
+  "treatments": [
+    {
+      "slug": "limpieza-facial-profunda",
+      "name": "Limpieza facial profunda",
+      "category": "faciales",
+      "price": "$35",
+      "priceNote": "por sesión",
+      "intro": "Una limpieza facial profunda ayuda a retirar impurezas acumuladas y a dejar la piel con una sensación más limpia, fresca y uniforme. El protocolo se adapta al estado visible de la piel y puede incluir higiene, exfoliación, extracción cuando corresponde y cuidado final.",
+      "benefits": [
+        "Favorece una limpieza más completa que la rutina domiciliaria.",
+        "Ayuda a retirar acumulación superficial e impurezas.",
+        "Puede mejorar la sensación de textura y frescura.",
+        "Prepara la piel para continuar una rutina de cuidado más ordenada."
+      ],
+      "procedure": "La sesión inicia con valoración visual e higiene. Según la necesidad, se realizan exfoliación, ablandamiento, extracción cuidadosa y aplicación de productos calmantes e hidratantes. El protocolo exacto puede variar según la piel.",
+      "duration": "Aproximadamente 60–75 minutos.",
+      "sessions": "La frecuencia depende del tipo de piel y de la rutina de cuidado. Puede programarse de forma periódica tras valoración.",
+      "before": [
+        "Evita exfoliaciones intensas el mismo día.",
+        "Informa si estás usando productos dermatológicos o si tu piel está irritada.",
+        "Acude sin maquillaje intenso si es posible."
+      ],
+      "after": [
+        "Usa protector solar diariamente.",
+        "Evita manipular la piel después de la sesión.",
+        "Mantén una rutina suave de limpieza e hidratación durante las horas posteriores."
+      ],
+      "faqs": [
+        ["¿La limpieza facial profunda es para todo tipo de piel?", "El protocolo puede adaptarse, pero primero se revisa el estado de la piel para decidir intensidad, productos y si conviene realizar extracciones."],
+        ["¿Puedo maquillarme después?", "Es preferible dejar la piel descansar durante varias horas y seguir las recomendaciones dadas al finalizar la sesión."],
+        ["¿Cada cuánto se recomienda?", "Depende de la piel, la rutina en casa y la presencia de impurezas. La frecuencia se define de manera personalizada."]
+      ],
+      "seoTerms": ["limpieza facial", "limpieza de poros", "cuidado facial", "exfoliación facial", "higiene facial"]
+    },
+    {
+      "slug": "hidratacion-facial",
+      "name": "Hidratación facial",
+      "category": "faciales",
+      "price": "$20",
+      "priceNote": "por sesión",
+      "intro": "La hidratación facial está enfocada en aportar confort y mejorar la sensación de suavidad de la piel mediante un protocolo cosmético adaptado a sus necesidades. Es una opción sencilla para pieles que se sienten tirantes, opacas o deshidratadas.",
+      "benefits": ["Aporta sensación de suavidad y confort.", "Ayuda a mejorar el aspecto de piel opaca o deshidratada.", "Complementa una rutina de cuidado facial.", "Puede combinarse con otros protocolos estéticos según valoración."],
+      "procedure": "Se realiza limpieza suave, preparación de la piel y aplicación de activos cosméticos hidratantes. El cierre incluye productos de cuidado y fotoprotección cuando corresponde.",
+      "duration": "Aproximadamente 40–60 minutos.",
+      "sessions": "Puede realizarse como sesión puntual o dentro de un plan de cuidado según la respuesta de la piel.",
+      "before": ["Evita procedimientos irritantes el mismo día.", "Comenta si tienes sensibilidad conocida a productos cosméticos."],
+      "after": ["Mantén hidratación domiciliaria constante.", "Usa protector solar.", "Evita fricción o exfoliación intensa inmediatamente después."],
+      "faqs": [
+        ["¿La hidratación facial reemplaza una limpieza profunda?", "No. Son objetivos diferentes: la hidratación prioriza confort y aporte cosmético de humedad, mientras la limpieza profunda se enfoca más en higiene y extracción cuando corresponde."],
+        ["¿Sirve para piel grasa?", "Una piel grasa también puede sentirse deshidratada. El protocolo se ajusta con productos adecuados al tipo de piel."],
+        ["¿Puedo hacerla antes de un evento?", "Sí puede ser una opción de cuidado previo, siempre que la piel esté estable y el protocolo se adapte a ella."]
+      ],
+      "seoTerms": ["hidratación facial", "piel deshidratada", "cuidado de la piel", "luminosidad facial", "suavidad de la piel"]
+    },
+    {
+      "slug": "despigmentacion-axilas",
+      "name": "Despigmentación de axilas",
+      "category": "corporales",
+      "price": "$80",
+      "priceNote": "paquete de 3 sesiones",
+      "intro": "El protocolo despigmentante de axilas busca acompañar el cuidado cosmético de una zona que puede presentar tono desigual por fricción, depilación, irritación u otros factores. Se trabaja de forma progresiva y con especial cuidado de la sensibilidad de la piel.",
+      "benefits": ["Enfoca el cuidado estético del tono desigual.", "Trabaja de forma progresiva sobre la apariencia de la zona.", "Incluye recomendaciones para reducir irritación y fricción.", "Permite seguimiento entre sesiones."],
+      "procedure": "Se revisa el estado de la piel y se aplican productos o técnicas cosméticas seleccionadas para la zona. La intensidad se ajusta según sensibilidad y antecedentes de irritación.",
+      "duration": "Aproximadamente 30–45 minutos.",
+      "sessions": "Paquete de 3 sesiones. La necesidad de continuar se evalúa de acuerdo con la respuesta observada.",
+      "before": ["Evita depilar o rasurar inmediatamente antes si tu piel se irrita con facilidad.", "No apliques desodorantes irritantes antes de la cita.", "Informa si hay lesiones, irritación activa o tratamiento dermatológico."],
+      "after": ["Evita fricción intensa durante las horas posteriores.", "Usa productos suaves recomendados para la zona.", "Sigue las indicaciones sobre depilación y desodorante entre sesiones."],
+      "faqs": [
+        ["¿En cuántas sesiones se ven cambios?", "La respuesta varía según la causa del tono desigual, la sensibilidad y los hábitos. Por eso se trabaja por sesiones y con seguimiento."],
+        ["¿Puedo depilarme el mismo día?", "Conviene separar la depilación del procedimiento cuando existe riesgo de irritación."],
+        ["¿El resultado es permanente?", "El tono de la piel puede volver a verse afectado por fricción, depilación o irritación. El cuidado domiciliario es parte importante del proceso."]
+      ],
+      "seoTerms": ["despigmentación de axilas", "axilas oscuras", "tono desigual", "cuidado de axilas", "pigmentación corporal"]
+    },
+    {
+      "slug": "tratamiento-pigmentacion",
+      "name": "Tratamiento de pigmentación",
+      "category": "faciales",
+      "price": "$120",
+      "priceNote": "paquete de 3 sesiones",
+      "intro": "Este tratamiento facial está orientado al cuidado cosmético de manchas y tono desigual. El enfoque es progresivo: se valora el tipo de pigmentación visible, la sensibilidad de la piel y los hábitos de exposición solar antes de definir el protocolo.",
+      "benefits": ["Acompaña el cuidado de manchas visibles y tono irregular.", "Promueve una rutina más consistente de fotoprotección.", "Permite seguimiento de la respuesta entre sesiones.", "Puede mejorar la apariencia general de luminosidad y uniformidad."],
+      "procedure": "Se realiza valoración, limpieza y aplicación de técnicas cosméticas despigmentantes compatibles con el estado de la piel. El plan puede combinar cuidados en cabina con recomendaciones domiciliarias.",
+      "duration": "Aproximadamente 45–60 minutos.",
+      "sessions": "Paquete de 3 sesiones. El intervalo se define según el protocolo y la tolerancia de la piel.",
+      "before": ["Usa protector solar de forma constante los días previos.", "Evita exponerte de forma intensa al sol antes de la sesión.", "Informa si utilizas retinoides, ácidos u otros productos activos."],
+      "after": ["Refuerza la fotoprotección.", "Evita exfoliar o irritar la piel durante el periodo indicado.", "Sigue únicamente los productos recomendados para evitar sobretratamiento."],
+      "faqs": [
+        ["¿Todas las manchas se tratan igual?", "No. El aspecto y el origen posible de una pigmentación pueden variar, por eso se realiza una valoración antes de seleccionar el protocolo."],
+        ["¿La protección solar es importante?", "Sí. La exposición solar puede influir en la apariencia de muchas pigmentaciones, por lo que la fotoprotección forma parte del cuidado."],
+        ["¿Puedo combinarlo con otros tratamientos?", "Depende de la sensibilidad y de los activos utilizados. Es preferible planificar las combinaciones de forma individual."]
+      ],
+      "seoTerms": ["tratamiento de manchas", "pigmentación facial", "despigmentante facial", "tono desigual", "manchas en el rostro"]
+    },
+    {
+      "slug": "secuelas-acne",
+      "name": "Tratamiento para secuelas de acné",
+      "category": "faciales",
+      "price": "$120",
+      "priceNote": "paquete de 3 sesiones",
+      "intro": "El tratamiento para secuelas de acné se centra en mejorar el aspecto de textura irregular y marcas superficiales mediante un plan estético progresivo. Antes de iniciar se distingue entre acné activo, manchas residuales y cambios de textura para elegir un abordaje adecuado.",
+      "benefits": ["Trabaja sobre la apariencia de marcas y textura irregular.", "Permite diferenciar necesidades de acné activo y secuelas.", "Se plantea como proceso progresivo, no como resultado inmediato.", "Incluye orientación de cuidado domiciliario y fotoprotección."],
+      "procedure": "Tras valorar la piel, se seleccionan técnicas cosméticas de renovación y cuidado compatibles con la sensibilidad presente. El protocolo puede cambiar entre sesiones según la respuesta.",
+      "duration": "Aproximadamente 45–70 minutos.",
+      "sessions": "Paquete de 3 sesiones. En secuelas más marcadas puede requerirse un plan más prolongado o valoración especializada.",
+      "before": ["Evita manipular lesiones activas.", "Informa sobre tratamientos dermatológicos recientes.", "Mantén fotoprotección adecuada."],
+      "after": ["Usa protector solar.", "Evita productos irritantes hasta que la piel se sienta estable.", "No manipules descamación, costras o áreas sensibles si aparecieran."],
+      "faqs": [
+        ["¿Se puede tratar si todavía tengo acné activo?", "Primero se valora qué predomina. Cuando hay inflamación activa importante, el enfoque puede ser distinto al de las secuelas."],
+        ["¿Desaparecen por completo las cicatrices?", "Los cambios de textura pueden responder de forma diferente. El objetivo estético debe definirse de manera realista según el tipo de secuela."],
+        ["¿Por qué se trabaja en varias sesiones?", "La renovación visible de la piel es progresiva y la tolerancia debe respetarse para evitar irritación innecesaria."]
+      ],
+      "seoTerms": ["secuelas de acné", "marcas de acné", "textura de la piel", "cicatrices de acné", "cuidado post acné"]
+    },
+    {
+      "slug": "tratamiento-acne",
+      "name": "Tratamiento de acné",
+      "category": "faciales",
+      "price": "$150",
+      "priceNote": "paquete de 3 sesiones",
+      "intro": "El tratamiento estético de acné está pensado para acompañar el cuidado de piel con tendencia a imperfecciones, exceso de grasa o poros congestionados. Se trabaja con un protocolo suave y ordenado, evitando promesas de curación y derivando cuando el cuadro requiere atención dermatológica.",
+      "benefits": ["Apoya una rutina de higiene adecuada para piel con imperfecciones.", "Ayuda a trabajar congestión y apariencia grasa de forma controlada.", "Promueve hábitos de cuidado y fotoprotección.", "Permite identificar cuándo conviene una valoración dermatológica."],
+      "procedure": "La sesión puede incluir higiene, preparación, extracción selectiva cuando es apropiada y aplicación de productos cosméticos para piel con tendencia acneica. La intensidad se ajusta para evitar sobreestimulación.",
+      "duration": "Aproximadamente 50–75 minutos.",
+      "sessions": "Paquete de 3 sesiones. La frecuencia se individualiza según sensibilidad, actividad de las lesiones y cuidados en casa.",
+      "before": ["No manipules las lesiones antes de la cita.", "Informa si estás usando medicación o tratamiento dermatológico.", "Evita mezclar varios exfoliantes o ácidos sin orientación."],
+      "after": ["Mantén una limpieza suave y constante.", "Usa protector solar no comedogénico si es adecuado para ti.", "Evita tocar o exprimir lesiones después de la sesión."],
+      "faqs": [
+        ["¿Este tratamiento cura el acné?", "No se presenta como una cura médica. Es un acompañamiento estético. El acné moderado, severo, doloroso o persistente requiere valoración dermatológica."],
+        ["¿Se hacen extracciones?", "Solo cuando son apropiadas y seguras para el tipo de lesión. No todas las imperfecciones deben extraerse."],
+        ["¿Qué pasa si uso tratamiento recetado?", "Debe informarse antes de la sesión para evitar combinaciones que puedan irritar o sensibilizar la piel."]
+      ],
+      "seoTerms": ["tratamiento de acné", "piel grasa", "poros congestionados", "imperfecciones", "limpieza para piel acneica"]
+    },
+    {
+      "slug": "anti-age",
+      "name": "Tratamiento Anti Age",
+      "category": "faciales",
+      "price": "$140",
+      "priceNote": "paquete de 3 sesiones",
+      "intro": "El protocolo Anti Age está orientado al cuidado cosmético de piel madura o con signos visibles de envejecimiento, priorizando hidratación, textura, luminosidad y apariencia de firmeza dentro de expectativas realistas.",
+      "benefits": ["Favorece una apariencia más hidratada y luminosa.", "Trabaja la sensación de textura y confort.", "Acompaña rutinas de cuidado para piel madura.", "Puede integrarse a un plan preventivo de cuidado facial."],
+      "procedure": "Se combinan limpieza, preparación de la piel y técnicas cosméticas enfocadas en hidratación, renovación suave y cuidado de la apariencia de firmeza, según tolerancia.",
+      "duration": "Aproximadamente 60 minutos.",
+      "sessions": "Paquete de 3 sesiones. Puede continuarse con mantenimiento según objetivos y respuesta.",
+      "before": ["Mantén fotoprotección en los días previos.", "Informa sobre sensibilidad, procedimientos recientes o productos activos."],
+      "after": ["Usa protector solar todos los días.", "Mantén hidratación y una rutina suave.", "Evita sumar procedimientos intensivos sin planificación."],
+      "faqs": [
+        ["¿Anti Age elimina arrugas?", "El objetivo es mejorar el cuidado y la apariencia general de la piel, no prometer eliminar arrugas o detener el envejecimiento."],
+        ["¿A qué edad se recomienda?", "Más que una edad fija, se considera el estado de la piel, sus necesidades y los objetivos de cuidado."],
+        ["¿Se puede combinar con hidratación facial?", "Sí, la hidratación suele formar parte del enfoque, aunque el protocolo se ajusta de forma individual."]
+      ],
+      "seoTerms": ["anti age", "cuidado antiedad", "piel madura", "rejuvenecimiento facial", "líneas de expresión"]
+    },
+    {
+      "slug": "rejuvenecimiento-escote-manos",
+      "name": "Rejuvenecimiento de rostro, escote y dorso de manos",
+      "category": "faciales",
+      "price": "$100",
+      "priceNote": "paquete de 3 sesiones",
+      "intro": "Este protocolo amplía el cuidado rejuvenecedor más allá del rostro para incluir escote y dorso de manos, zonas que también reflejan exposición ambiental y cambios de textura. El objetivo es trabajar luminosidad, hidratación y apariencia uniforme de manera coordinada.",
+      "benefits": ["Incluye rostro, escote y dorso de manos.", "Ayuda a unificar la experiencia de cuidado entre varias zonas expuestas.", "Prioriza hidratación y luminosidad.", "Permite un plan progresivo de tres sesiones."],
+      "procedure": "Se realiza limpieza y preparación de cada zona seguida de técnicas cosméticas de hidratación y renovación suave, adaptando productos y tiempos a la sensibilidad de rostro, escote y manos.",
+      "duration": "Aproximadamente 60–80 minutos.",
+      "sessions": "Paquete de 3 sesiones.",
+      "before": ["Evita exposición solar intensa antes de la cita.", "Informa sobre irritación o procedimientos recientes en cualquiera de las zonas."],
+      "after": ["Aplica fotoprotección también en escote y manos.", "Mantén hidratación diaria.", "Evita fricción o exfoliación intensa tras la sesión."],
+      "faqs": [
+        ["¿Por qué incluir escote y manos?", "Son áreas expuestas que con frecuencia reciben menos cuidado que el rostro y pueden mostrar cambios de tono, hidratación y textura."],
+        ["¿Se trabaja igual en todas las zonas?", "No necesariamente. La piel del rostro, escote y manos puede requerir productos o intensidades diferentes."],
+        ["¿El precio incluye las tres zonas?", "Sí, el paquete descrito contempla rostro, escote y dorso de manos."]
+      ],
+      "seoTerms": ["rejuvenecimiento facial", "rejuvenecimiento de manos", "cuidado de escote", "piel madura", "luminosidad"]
+    },
+    {
+      "slug": "extraccion-acrocordones",
+      "name": "Extracción de acrocordones",
+      "category": "faciales",
+      "price": "$25 c/u",
+      "priceNote": "3 unidades: $75",
+      "intro": "La extracción de acrocordones es un servicio que debe realizarse únicamente después de revisar la lesión y confirmar que el procedimiento estético es apropiado. No toda lesión elevada de la piel es un acrocordón, por lo que la valoración previa es indispensable.",
+      "benefits": ["Valoración previa de la zona.", "Procedimiento puntual sobre lesiones compatibles con acrocordones.", "Orientación de cuidado posterior.", "Derivación cuando la lesión no es adecuada para manejo estético."],
+      "procedure": "Primero se observa la lesión. Si su aspecto no es compatible con un acrocordón típico o existen dudas, se recomienda evaluación médica antes de proceder. Cuando es apta, se aplica el protocolo correspondiente y se dan cuidados posteriores.",
+      "duration": "Variable según cantidad y localización.",
+      "sessions": "Servicio por unidad. El precio publicado es $25 por cada uno; 3 unidades equivalen a $75.",
+      "before": ["No manipules ni intentes cortar la lesión en casa.", "Informa si la lesión ha cambiado de color, forma, tamaño, sangra o duele.", "Comenta antecedentes relevantes de cicatrización o medicación."],
+      "after": ["Mantén la zona limpia según indicaciones.", "Evita retirar costras o manipular el área.", "Consulta si aparece una reacción inesperada."],
+      "faqs": [
+        ["¿Todas las bolitas de piel son acrocordones?", "No. Hay diferentes tipos de lesiones cutáneas. Si existen dudas sobre su naturaleza, debe realizarse una valoración médica."],
+        ["¿Tres por $75 es una promoción?", "No representa descuento: corresponde al mismo valor unitario de $25."],
+        ["¿Se puede retirar cualquier acrocordón?", "La localización, tamaño, aspecto y antecedentes influyen. Primero se determina si es apropiado realizar el procedimiento."]
+      ],
+      "seoTerms": ["acrocordones", "extracción de acrocordones", "fibromas blandos", "lesiones cutáneas", "cuidado de la piel"]
+    },
+    {
+      "slug": "reduccion-medidas",
+      "name": "Reducción de medidas",
+      "category": "corporales",
+      "price": "$280",
+      "priceNote": "paquete de 8 sesiones",
+      "intro": "El programa de reducción de medidas está orientado al acompañamiento estético del contorno corporal mediante sesiones planificadas por zonas. Se trabaja con metas realistas y seguimiento de medidas, sin presentarlo como sustituto de alimentación, actividad física o atención médica.",
+      "benefits": ["Permite seguimiento de medidas por zonas.", "Organiza un plan de 8 sesiones.", "Puede combinar técnicas estéticas según valoración.", "Acompaña objetivos de contorno corporal con expectativas realistas."],
+      "procedure": "Se realiza valoración inicial, selección de zonas y registro de referencia. Las técnicas aplicadas pueden variar según el objetivo, la disponibilidad de equipos y la tolerancia individual.",
+      "duration": "Aproximadamente 45–75 minutos por sesión.",
+      "sessions": "Paquete de 8 sesiones.",
+      "before": ["Acude hidratada y con ropa cómoda.", "Informa sobre procedimientos recientes, embarazo, dispositivos médicos o condiciones relevantes antes de usar aparatología."],
+      "after": ["Mantén hidratación adecuada.", "Sigue las recomendaciones de movimiento y hábitos indicadas para acompañar el plan.", "Respeta los intervalos entre sesiones."],
+      "faqs": [
+        ["¿Es un tratamiento para bajar de peso?", "No. Está orientado al contorno y medidas corporales, no sustituye un plan de pérdida de peso ni atención nutricional."],
+        ["¿Qué zonas pueden trabajarse?", "Depende de la valoración y del protocolo disponible. Las zonas se definen al iniciar el plan."],
+        ["¿Se garantizan centímetros específicos?", "No. La respuesta varía entre personas; por eso se realiza seguimiento sin prometer una cifra exacta."]
+      ],
+      "seoTerms": ["reducción de medidas", "contorno corporal", "tratamiento corporal", "medidas corporales", "estética corporal"]
+    },
+    {
+      "slug": "celulitis",
+      "name": "Tratamiento para celulitis",
+      "category": "corporales",
+      "price": "$300",
+      "priceNote": "paquete de 8 sesiones",
+      "intro": "El tratamiento estético para celulitis busca mejorar la apariencia visual y la textura de zonas con aspecto de piel de naranja mediante un programa de varias sesiones y técnicas seleccionadas según valoración.",
+      "benefits": ["Trabaja la apariencia de la textura irregular.", "Se organiza en un plan de 8 sesiones.", "Puede combinar masaje, técnicas manuales o aparatología según protocolo.", "Incluye seguimiento visual de la zona tratada."],
+      "procedure": "Después de valorar la zona, se seleccionan técnicas orientadas a movilización, masaje y cuidado de la apariencia cutánea. El enfoque puede variar entre sesiones.",
+      "duration": "Aproximadamente 45–60 minutos.",
+      "sessions": "Paquete de 8 sesiones.",
+      "before": ["Usa ropa cómoda.", "Informa sobre sensibilidad, moretones frecuentes, problemas circulatorios diagnosticados o procedimientos recientes."],
+      "after": ["Mantén hidratación.", "Evita masajes intensos adicionales si la zona queda sensible.", "Sigue el plan de sesiones recomendado."],
+      "faqs": [
+        ["¿La celulitis desaparece por completo?", "La celulitis es muy común y su apariencia puede variar. El objetivo es mejorar visualmente textura y cuidado de la zona, sin prometer eliminación permanente."],
+        ["¿Duele el tratamiento?", "La intensidad se ajusta. Algunas técnicas pueden sentirse firmes, pero no deberían realizarse de forma innecesariamente dolorosa."],
+        ["¿Qué áreas se trabajan con más frecuencia?", "Muslos y glúteos son zonas frecuentes, aunque el plan se define tras valoración."]
+      ],
+      "seoTerms": ["celulitis", "piel de naranja", "tratamiento anticelulitis", "textura corporal", "muslos y glúteos"]
+    },
+    {
+      "slug": "reafirmacion-gluteos",
+      "name": "Reafirmación, aumento visual y tonificación de glúteos",
+      "category": "corporales",
+      "price": "$300",
+      "priceNote": "paquete de 8 sesiones",
+      "intro": "Este programa corporal combina técnicas estéticas orientadas a mejorar la apariencia de firmeza, tono y proyección visual de los glúteos. Se plantea como complemento estético y no como reemplazo del entrenamiento de fuerza.",
+      "benefits": ["Trabaja apariencia de firmeza y tono.", "Plan estructurado de 8 sesiones.", "Puede acompañar hábitos de actividad física.", "Seguimiento visual y por medidas según el objetivo."],
+      "procedure": "Se valoran forma, tono y objetivos. Según el protocolo disponible, pueden combinarse técnicas manuales o aparatología orientadas al cuidado y estimulación estética de la zona.",
+      "duration": "Aproximadamente 45–60 minutos.",
+      "sessions": "Paquete de 8 sesiones.",
+      "before": ["Usa ropa cómoda.", "Informa sobre lesiones musculares, procedimientos recientes o condiciones que limiten ciertas técnicas."],
+      "after": ["Mantén hidratación.", "Combina el plan con hábitos saludables y ejercicio si es apropiado para ti.", "Respeta la frecuencia indicada."],
+      "faqs": [
+        ["¿El tratamiento aumenta músculo?", "No debe presentarse como sustituto del entrenamiento. Busca una mejora estética visual de firmeza y tono según las técnicas utilizadas."],
+        ["¿Cuándo se evalúan resultados?", "Se recomienda comparar de manera progresiva a lo largo del paquete, no después de una sola sesión."],
+        ["¿Se puede combinar con reducción de medidas?", "Puede planificarse por objetivos y zonas, evitando mezclar protocolos sin una secuencia clara."]
+      ],
+      "seoTerms": ["reafirmación de glúteos", "tonificación de glúteos", "estética de glúteos", "firmeza corporal", "contorno de glúteos"]
+    },
+    {
+      "slug": "reafirmacion-busto",
+      "name": "Reafirmación de busto",
+      "category": "corporales",
+      "price": "$200",
+      "priceNote": "paquete de 8 sesiones",
+      "intro": "El programa de reafirmación de busto está orientado al cuidado estético de la piel y a mejorar visualmente la sensación de firmeza de la zona mediante técnicas no quirúrgicas compatibles con la valoración individual.",
+      "benefits": ["Cuidado estético de la piel del escote y zona del busto.", "Plan progresivo de 8 sesiones.", "Enfoque no quirúrgico y de expectativas realistas.", "Recomendaciones de cuidado domiciliario."],
+      "procedure": "Se revisa el estado de la piel y se aplican técnicas cosméticas o de aparatología apropiadas al protocolo. No se trabaja sobre hallazgos que requieran evaluación médica.",
+      "duration": "Aproximadamente 35–50 minutos.",
+      "sessions": "Paquete de 8 sesiones.",
+      "before": ["Informa sobre embarazo, lactancia, cirugía reciente, implantes o molestias en la zona.", "No se realiza sobre lesiones o alteraciones no valoradas."],
+      "after": ["Sigue las recomendaciones de hidratación y cuidado cutáneo.", "Consulta si aparece molestia persistente.", "Mantén controles médicos habituales cuando correspondan."],
+      "faqs": [
+        ["¿Es equivalente a una cirugía de levantamiento?", "No. Es un tratamiento estético no quirúrgico y sus objetivos son más moderados."],
+        ["¿Se puede realizar con implantes?", "Debe informarse antes. La compatibilidad depende de la técnica utilizada y puede requerir autorización profesional."],
+        ["¿Trabaja también el escote?", "El cuidado puede incluir piel del escote según el protocolo definido."]
+      ],
+      "seoTerms": ["reafirmación de busto", "firmeza de busto", "cuidado del escote", "tratamiento corporal", "estética no quirúrgica"]
+    },
+    {
+      "slug": "drenaje-linfatico-manual",
+      "name": "Drenaje linfático manual",
+      "category": "corporales",
+      "price": "$45",
+      "priceNote": "por sesión · paquete de 6: $260",
+      "intro": "El drenaje linfático manual utiliza movimientos suaves y rítmicos siguiendo trayectos específicos. Se ofrece como una terapia manual de bienestar y debe adaptarse a los antecedentes de cada persona.",
+      "benefits": ["Técnica manual suave y rítmica.", "Promueve una experiencia de ligereza y relajación.", "Puede integrarse a planes de bienestar corporal.", "Paquete de 6 sesiones con ahorro de $10 frente a sesiones individuales."],
+      "procedure": "La sesión se realiza con maniobras manuales lentas y de presión ligera, siguiendo una secuencia determinada. Antes de comenzar se revisan antecedentes relevantes.",
+      "duration": "Aproximadamente 50–60 minutos.",
+      "sessions": "Sesión individual $45. Paquete de 6 sesiones $260; frente a 6 sesiones individuales ($270), el ahorro es de $10.",
+      "before": ["Informa sobre diagnóstico cardiovascular, renal, infecciones, fiebre, trombosis o cirugía reciente.", "No ocultes molestias o hinchazón de causa desconocida."],
+      "after": ["Hidrátate de forma habitual.", "Observa cómo responde tu cuerpo y comunica cualquier molestia.", "Sigue indicaciones médicas si el drenaje forma parte de un proceso posoperatorio."],
+      "faqs": [
+        ["¿El drenaje linfático es un masaje fuerte?", "No. Se caracteriza por maniobras suaves y rítmicas; una presión intensa no define esta técnica."],
+        ["¿Sirve para bajar de peso?", "No es un tratamiento de pérdida de peso."],
+        ["¿El paquete tiene descuento?", "Sí. Seis sesiones individuales sumarían $270 y el paquete cuesta $260."]
+      ],
+      "seoTerms": ["drenaje linfático manual", "masaje linfático", "bienestar corporal", "masaje suave", "drenaje corporal"]
+    },
+    {
+      "slug": "tratamiento-capilar-radiofrecuencia-prp-mesoterapia",
+      "name": "Radiofrecuencia + Plasma Rico en Plaquetas + Mesoterapia",
+      "category": "capilar",
+      "price": "$120",
+      "priceNote": "por sesión",
+      "intro": "Este protocolo capilar combina varias técnicas y requiere valoración profesional previa. La indicación, materiales, condiciones de bioseguridad y compatibilidad de cada componente deben definirse antes de realizar la sesión.",
+      "benefits": ["Enfoque combinado para objetivos de cuidado capilar.", "Valoración previa del cuero cabelludo y antecedentes.", "Planificación individual de la sesión.", "Seguimiento de la respuesta y derivación cuando corresponde."],
+      "procedure": "La secuencia exacta depende de la valoración profesional y de los protocolos aplicables. El componente de plasma rico en plaquetas implica obtención y manejo de material biológico, por lo que debe realizarse únicamente por personal autorizado y bajo normas de bioseguridad.",
+      "duration": "Variable según valoración y protocolo.",
+      "sessions": "$120 por sesión. La cantidad y frecuencia no deben fijarse sin valoración previa.",
+      "before": ["Informa sobre medicación, condiciones médicas, procedimientos capilares recientes y antecedentes relevantes.", "Sigue las indicaciones específicas que entregue el profesional responsable antes del procedimiento."],
+      "after": ["Sigue estrictamente los cuidados indicados por el profesional.", "Evita añadir productos o procedimientos irritantes sin autorización.", "Consulta ante dolor intenso, reacción inesperada u otros signos de alarma."],
+      "faqs": [
+        ["¿Cuántas sesiones necesito?", "Depende del motivo de consulta, valoración y protocolo profesional; no es responsable fijar el número solo con información general."],
+        ["¿El PRP puede hacerlo cualquier centro?", "Debe realizarse por personal autorizado y con protocolos de bioseguridad y manejo de material biológico aplicables."],
+        ["¿Es un tratamiento para cualquier tipo de caída del cabello?", "No. La caída del cabello puede tener distintas causas y algunas requieren evaluación médica específica."]
+      ],
+      "seoTerms": ["tratamiento capilar", "plasma rico en plaquetas capilar", "PRP capilar", "mesoterapia capilar", "radiofrecuencia capilar"]
+    },
+    {
+      "slug": "masaje-relajante-cuerpo-completo",
+      "name": "Masaje relajante de cuerpo completo",
+      "category": "masajes",
+      "price": "$45",
+      "priceNote": "por sesión",
+      "intro": "El masaje relajante de cuerpo completo es una experiencia de bienestar enfocada en disminuir la sensación de tensión y favorecer un momento de descanso mediante maniobras suaves y fluidas.",
+      "benefits": ["Favorece una experiencia de relajación general.", "Ayuda a disminuir la sensación cotidiana de tensión muscular.", "Ofrece una pausa de bienestar físico y mental.", "La presión puede adaptarse dentro de un enfoque relajante."],
+      "procedure": "Se trabajan diferentes zonas del cuerpo con maniobras continuas, ritmo calmado y presión moderada, ajustando la sesión a preferencias y sensibilidad.",
+      "duration": "Aproximadamente 60 minutos.",
+      "sessions": "Sesión individual.",
+      "before": ["Informa sobre lesiones, dolor agudo, fiebre, embarazo o procedimientos recientes.", "Evita comidas muy abundantes justo antes de la sesión."],
+      "after": ["Hidrátate con normalidad.", "Permite un periodo tranquilo después si es posible.", "Comunica cualquier molestia inusual."],
+      "faqs": [
+        ["¿Es un masaje profundo?", "No necesariamente. El objetivo principal es relajación; la presión se adapta sin convertirlo en una terapia dolorosa."],
+        ["¿Qué zonas incluye?", "Se organiza como cuerpo completo respetando preferencias, comodidad y zonas que deban evitarse."],
+        ["¿Debo llevar algo especial?", "Ropa cómoda es suficiente; el centro facilita lo necesario para la sesión según su protocolo."]
+      ],
+      "seoTerms": ["masaje relajante", "masaje cuerpo completo", "relajación", "bienestar", "masaje antiestrés"]
+    },
+    {
+      "slug": "bambuterapia-espalda-brazos-piernas",
+      "name": "Bambuterapia en espalda, brazos y piernas",
+      "category": "masajes",
+      "price": "$40",
+      "priceNote": "por sesión",
+      "intro": "La bambuterapia utiliza piezas de bambú como complemento de maniobras de masaje sobre espalda, brazos y piernas. Ofrece una experiencia diferente, de presión modulable y enfoque corporal relajante.",
+      "benefits": ["Experiencia de masaje con bambú.", "Trabajo de espalda, brazos y piernas.", "Presión ajustable según sensibilidad.", "Combina relajación y estimulación manual."],
+      "procedure": "Se aplican maniobras manuales y rodamiento controlado con bambú sobre las zonas definidas, evitando áreas sensibles, lesionadas o contraindicadas.",
+      "duration": "Aproximadamente 50–60 minutos.",
+      "sessions": "Sesión individual.",
+      "before": ["Informa sobre moretones frecuentes, varices dolorosas, lesiones o sensibilidad marcada.", "Evita la sesión si presentas dolor agudo o inflamación sin valorar."],
+      "after": ["Mantén hidratación habitual.", "Evita presión adicional intensa si alguna zona queda sensible.", "Comenta cualquier reacción fuera de lo esperado."],
+      "faqs": [
+        ["¿La bambuterapia duele?", "No debería realizarse con dolor intenso. La presión se adapta a la tolerancia de cada persona."],
+        ["¿Incluye todo el cuerpo?", "Este servicio está descrito específicamente para espalda, brazos y piernas."],
+        ["¿Se puede hacer si tengo varices?", "Debe informarse antes; algunas zonas o técnicas pueden necesitar evitarse según el caso."]
+      ],
+      "seoTerms": ["bambuterapia", "masaje con bambú", "masaje de espalda", "masaje de piernas", "terapia relajante"]
+    },
+    {
+      "slug": "masaje-piedras-calientes",
+      "name": "Masaje con piedras calientes",
+      "category": "masajes",
+      "price": "$50",
+      "priceNote": "por sesión",
+      "intro": "El masaje con piedras calientes combina maniobras manuales con calor controlado para crear una experiencia profunda de relajación. La temperatura se ajusta cuidadosamente para proteger la piel y mantener el confort.",
+      "benefits": ["Sensación cálida y envolvente.", "Favorece una experiencia de relajación muscular.", "Combina masaje manual y calor localizado.", "La temperatura se adapta a la tolerancia."],
+      "procedure": "Se colocan o deslizan piedras templadas en zonas seleccionadas mientras se realizan maniobras de masaje. Se comprueba siempre la temperatura antes del contacto prolongado.",
+      "duration": "Aproximadamente 60 minutos.",
+      "sessions": "Sesión individual.",
+      "before": ["Informa sobre alteraciones de sensibilidad, problemas circulatorios, embarazo o condiciones que afecten tolerancia al calor.", "No se realiza sobre piel lesionada o irritada."],
+      "after": ["Evita exposición adicional a calor intenso inmediatamente después.", "Hidrátate normalmente.", "Comunica cualquier reacción cutánea inesperada."],
+      "faqs": [
+        ["¿Las piedras están muy calientes?", "No deberían causar ardor. La temperatura se controla y se adapta antes y durante la sesión."],
+        ["¿Es recomendable para todas las personas?", "No. Algunas condiciones pueden hacer poco recomendable el uso de calor, por lo que se revisan antecedentes."],
+        ["¿Se combina con masaje manual?", "Sí, la experiencia integra maniobras manuales y uso controlado de piedras."]
+      ],
+      "seoTerms": ["masaje con piedras calientes", "hot stone massage", "masaje relajante", "terapia de calor", "relajación muscular"]
+    },
+    {
+      "slug": "masaje-velas",
+      "name": "Masaje de velas",
+      "category": "masajes",
+      "price": "$40",
+      "priceNote": "por sesión",
+      "intro": "El masaje de velas utiliza un producto cosmético de masaje que se funde a temperatura agradable y aporta una experiencia sensorial cálida, aromática y relajante.",
+      "benefits": ["Experiencia sensorial cálida.", "Aporta deslizamiento y sensación de suavidad en la piel.", "Combina aroma, masaje y relajación.", "Temperatura controlada y confortable."],
+      "procedure": "Se utiliza una vela cosmética diseñada para masaje; el producto fundido se prueba antes de aplicarse y se integra con maniobras relajantes.",
+      "duration": "Aproximadamente 50–60 minutos.",
+      "sessions": "Sesión individual.",
+      "before": ["Informa sobre alergias a fragancias o ingredientes cosméticos.", "Evita la sesión sobre piel irritada o lesionada."],
+      "after": ["Deja que los productos permanezcan el tiempo recomendado si tu piel los tolera.", "Comunica irritación o sensibilidad posterior."],
+      "faqs": [
+        ["¿Se usa cera de vela común?", "No. Debe utilizarse un producto cosmético formulado específicamente para masaje."],
+        ["¿Quema la piel?", "El producto se aplica a temperatura controlada y se prueba antes del contacto."],
+        ["¿Tiene aroma?", "Habitualmente sí; si tienes sensibilidad a fragancias debes indicarlo antes."]
+      ],
+      "seoTerms": ["masaje de velas", "candle massage", "masaje aromático", "relajación sensorial", "masaje corporal"]
+    },
+    {
+      "slug": "masaje-pindas",
+      "name": "Masaje con pindas",
+      "category": "masajes",
+      "price": "$50",
+      "priceNote": "por sesión",
+      "intro": "El masaje con pindas combina maniobras corporales con saquitos textiles preparados para aportar una experiencia aromática y térmica controlada. Se utiliza dentro de un enfoque de relajación y bienestar.",
+      "benefits": ["Experiencia aromática y térmica.", "Movimientos de presión y deslizamiento controlados.", "Favorece una sesión envolvente y relajante.", "Puede adaptarse a preferencias de intensidad y aroma."],
+      "procedure": "Las pindas se preparan y templan antes de aplicarlas mediante presiones, pases y movimientos rítmicos sobre zonas seleccionadas.",
+      "duration": "Aproximadamente 60 minutos.",
+      "sessions": "Sesión individual.",
+      "before": ["Informa sobre alergias a hierbas, aceites o fragancias.", "Comenta si tienes alteraciones de sensibilidad al calor."],
+      "after": ["Hidrátate normalmente.", "Evita fuentes de calor intenso inmediatamente después si quedas muy sensibilizada/o.", "Comunica reacciones cutáneas o respiratorias a aromas."],
+      "faqs": [
+        ["¿Qué contienen las pindas?", "La composición puede variar según el protocolo; debe informarse si tienes alergias conocidas."],
+        ["¿Se aplican calientes?", "Se utilizan templadas y con control de temperatura para mantener el confort."],
+        ["¿Es un masaje fuerte?", "Puede ajustarse, pero el objetivo de esta experiencia es principalmente relajante."]
+      ],
+      "seoTerms": ["masaje con pindas", "pindas herbales", "masaje aromático", "terapia relajante", "bienestar"]
+    },
+    {
+      "slug": "velo-novia-masaje-craneal",
+      "name": "Velo de novia + masaje craneal",
+      "category": "masajes",
+      "price": "$50",
+      "priceNote": "por sesión",
+      "intro": "La experiencia Velo de Novia + masaje craneal combina un ritual corporal de bienestar con masaje de cuero cabelludo y cabeza, pensado especialmente para quienes buscan una pausa relajante antes de un evento o como experiencia de autocuidado.",
+      "benefits": ["Combina ritual corporal y masaje craneal.", "Enfoque relajante y sensorial.", "Puede ser una experiencia previa a eventos.", "Sesión diseñada para descanso y cuidado personal."],
+      "procedure": "Se realiza el ritual corporal definido por el centro y se complementa con maniobras suaves en cuero cabelludo, sienes y zonas craneales de confort, respetando preferencias.",
+      "duration": "Aproximadamente 60 minutos.",
+      "sessions": "Sesión individual.",
+      "before": ["Informa sobre migraña activa, lesiones del cuero cabelludo o sensibilidad a productos.", "Si es antes de un evento, agenda con tiempo suficiente."],
+      "after": ["Descansa si es posible después de la sesión.", "Evita aplicar productos irritantes en cuero cabelludo si se ha trabajado con cosméticos."],
+      "faqs": [
+        ["¿Es solo para novias?", "No. El nombre describe la experiencia, pero puede reservarla cualquier persona que busque este tipo de ritual."],
+        ["¿El masaje craneal usa aceite?", "Depende del protocolo y de la preferencia; puede adaptarse para no interferir con el peinado cuando se agenda antes de un evento."],
+        ["¿Cuándo conviene hacerlo antes de una boda?", "Es preferible coordinarlo con anticipación para que encaje con maquillaje, peinado y otros preparativos."]
+      ],
+      "seoTerms": ["velo de novia", "masaje craneal", "ritual de novia", "relajación pre boda", "masaje de cabeza"]
+    },
+    {
+      "slug": "reflexologia-podal",
+      "name": "Reflexología podal",
+      "category": "masajes",
+      "price": "$25",
+      "priceNote": "por sesión",
+      "intro": "La reflexología podal utiliza presiones manuales en diferentes puntos de los pies dentro de una experiencia de relajación. Se ofrece como práctica de bienestar y no como método para diagnosticar o tratar enfermedades.",
+      "benefits": ["Atención focalizada en pies.", "Favorece una experiencia de relajación.", "Puede aliviar la sensación cotidiana de cansancio en los pies.", "Sesión breve y fácil de incorporar a una rutina de bienestar."],
+      "procedure": "Se realiza higiene de la zona y luego presiones manuales y maniobras de masaje en ambos pies, ajustando la intensidad a la comodidad.",
+      "duration": "Aproximadamente 30–40 minutos.",
+      "sessions": "Sesión individual.",
+      "before": ["Informa sobre heridas, infecciones, dolor intenso, lesiones recientes o alteraciones importantes en los pies.", "Evita la sesión si existe una lesión aguda no valorada."],
+      "after": ["Usa calzado cómodo si los pies quedan sensibles.", "Mantén higiene habitual.", "Consulta si existe dolor persistente que no parezca muscular o de cansancio."],
+      "faqs": [
+        ["¿La reflexología diagnostica enfermedades?", "No. En este servicio se utiliza como experiencia de bienestar y relajación, no como diagnóstico médico."],
+        ["¿Duele?", "La presión se adapta. Algunas zonas pueden sentirse sensibles, pero no se busca provocar dolor intenso."],
+        ["¿Es lo mismo que un masaje de pies?", "Comparten maniobras manuales, aunque la reflexología suele organizar presiones por puntos y secuencias específicas."]
+      ],
+      "seoTerms": ["reflexología podal", "masaje de pies", "relajación de pies", "bienestar podal", "pies cansados"]
+    },
+    {
+      "slug": "masaje-cocoterapia",
+      "name": "Masaje cocoterapia",
+      "category": "masajes",
+      "price": "$30",
+      "priceNote": "por sesión",
+      "intro": "La cocoterapia combina masaje relajante con productos cosméticos derivados del coco para ofrecer una experiencia aromática y de suavidad de la piel.",
+      "benefits": ["Aroma tropical y experiencia sensorial.", "Favorece deslizamiento suave durante el masaje.", "Aporta sensación de piel acondicionada.", "Sesión relajante de enfoque corporal."],
+      "procedure": "Se aplican productos cosméticos aptos para masaje con aroma o derivados de coco, acompañados de maniobras suaves y fluidas.",
+      "duration": "Aproximadamente 45–50 minutos.",
+      "sessions": "Sesión individual.",
+      "before": ["Informa sobre alergia al coco, fragancias o cosméticos.", "No se aplica sobre piel irritada o lesionada."],
+      "after": ["Si tu piel tolera el producto, sigue las indicaciones sobre retiro o permanencia.", "Comunica irritación, picor o reacción inesperada."],
+      "faqs": [
+        ["¿Usan aceite de coco puro?", "El producto exacto depende del protocolo; puede ser una formulación cosmética para masaje con derivados o aroma de coco."],
+        ["¿Sirve para piel seca?", "Puede dejar una sensación de suavidad, pero no reemplaza el manejo dermatológico de sequedad persistente o dermatitis."],
+        ["¿Tiene fragancia?", "Habitualmente sí. Debes indicar sensibilidad a perfumes o aromas antes de la sesión."]
+      ],
+      "seoTerms": ["cocoterapia", "masaje con coco", "masaje aromático", "relajación corporal", "cuidado de la piel"]
+    },
+    {
+      "slug": "paquete-espalda-brazos-cuello-frutoterapia-masaje",
+      "name": "Espalda + brazos + cuello + limpieza facial + frutoterapia + masaje relajante",
+      "category": "paquetes",
+      "price": "$50",
+      "priceNote": "experiencia combinada",
+      "intro": "Una experiencia combinada que reúne cuidado de espalda, brazos y cuello, limpieza facial, frutoterapia cosmética y masaje relajante en una sola cita. Está pensada para quien desea alternar cuidado de la piel y descanso corporal.",
+      "benefits": ["Integra cuidado facial y corporal.", "Incluye masaje relajante.", "Combina varias etapas en una sola experiencia.", "Opción práctica para regalar o reservar como autocuidado."],
+      "procedure": "La sesión se organiza por etapas para evitar saturar la piel: preparación corporal, limpieza facial, aplicación de la frutoterapia según tolerancia y cierre con maniobras relajantes.",
+      "duration": "Aproximadamente 90 minutos.",
+      "sessions": "Experiencia individual.",
+      "before": ["Informa sobre alergias a frutas, extractos, fragancias o cosméticos.", "Evita exfoliaciones intensas antes de la cita.", "Comenta lesiones o dolor agudo en zonas de masaje."],
+      "after": ["Mantén la piel protegida del sol.", "Hidrátate normalmente.", "Evita añadir exfoliantes fuertes el mismo día."],
+      "faqs": [
+        ["¿Qué es la frutoterapia en este paquete?", "Se refiere al uso cosmético de productos o extractos inspirados en frutas dentro del protocolo, según disponibilidad y tolerancia."],
+        ["¿Incluye masaje de cuerpo completo?", "El paquete incluye masaje relajante, pero la extensión exacta se confirma al reservar para organizar el tiempo total."],
+        ["¿Puedo regalarlo?", "Sí, puede manejarse como experiencia de regalo si el centro habilita bono o comprobante."]
+      ],
+      "seoTerms": ["paquete spa", "limpieza facial y masaje", "frutoterapia", "experiencia relajante", "paquete estético"]
+    },
+    {
+      "slug": "paquete-espalda-brazos-cuello-limpieza-facial",
+      "name": "Espalda + brazos + cuello + limpieza facial",
+      "category": "paquetes",
+      "price": "$45",
+      "priceNote": "experiencia combinada",
+      "intro": "Este paquete reúne cuidado de espalda, brazos y cuello con una limpieza facial en una misma sesión. Es una alternativa sencilla para atender varias zonas sin añadir etapas de masaje o frutoterapia.",
+      "benefits": ["Combina cuidado corporal y facial.", "Permite atender varias zonas en una sola cita.", "Protocolo más directo que el paquete completo.", "Ideal para quien busca limpieza y cuidado básico."],
+      "procedure": "Se trabaja primero la preparación de las zonas corporales y luego se realiza la limpieza facial adaptada a la piel, manteniendo una secuencia cómoda y ordenada.",
+      "duration": "Aproximadamente 70–80 minutos.",
+      "sessions": "Experiencia individual.",
+      "before": ["Evita irritar o exfoliar intensamente la piel antes de la cita.", "Informa sobre sensibilidad, alergias o lesiones activas."],
+      "after": ["Usa protector solar.", "Mantén una rutina suave de limpieza e hidratación.", "Evita manipular la piel después de la sesión."],
+      "faqs": [
+        ["¿Incluye masaje relajante?", "No. Ese componente corresponde al paquete más completo de $50."],
+        ["¿La limpieza facial incluye extracción?", "Puede incluirla cuando la valoración de la piel indica que es apropiada."],
+        ["¿Puedo cambiar una de las zonas?", "Las modificaciones dependen de la organización y tiempo del centro; se confirman al reservar."]
+      ],
+      "seoTerms": ["paquete limpieza facial", "cuidado de espalda", "limpieza de brazos y cuello", "experiencia estética", "limpieza corporal"]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" preserveAspectRatio="xMidYMid slice">
+<defs>
+  <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f4ece3"/><stop offset=".55" stop-color="#d9c4ae"/><stop offset="1" stop-color="#b58f6d"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="900" height="1100" fill="url(#bg)"/>
+<circle cx="210" cy="180" r="230" fill="url(#glow)"/>
+<path d="M760 90c-155 125-223 296-164 461 53 148 176 223 277 261" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2"/>
+<path d="M712 90c-142 184-170 363-63 516 66 95 147 141 231 169" fill="none" stroke="#7f674f" stroke-opacity=".28" stroke-width="3"/>
+<g fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="3">
+<path d="M113 815c121-106 250-143 390-113 120 25 214 99 296 206"/>
+<path d="M165 871c103-79 213-105 327-81 98 21 179 79 249 165"/>
+</g>
+<g transform="translate(140 240)" fill="none" stroke="#7e5f44" stroke-opacity=".44" stroke-width="4" stroke-linecap="round">
+<path d="M290 0c-50 76-115 120-198 132 51 28 102 35 154 19-44 51-61 110-50 177 42-34 73-76 94-127 21 51 52 93 94 127 11-67-6-126-50-177 52 16 103 9 154-19C405 120 340 76 290 0Z"/>
+<circle cx="290" cy="156" r="18"/>
+</g>
+<text x="72" y="1015" fill="#fff" fill-opacity=".72" font-family="Georgia,serif" font-size="34">cuidado · calma · bienestar</text>
+</svg>

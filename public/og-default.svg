@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f4ece3"/><stop offset=".55" stop-color="#d9c4ae"/><stop offset="1" stop-color="#b58f6d"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="940" cy="120" r="260" fill="#fff" fill-opacity=".22"/>
+<path d="M920 125c-52 76-118 120-200 132 51 28 102 35 154 19-44 51-61 110-50 177 42-34 73-76 96-127 21 51 52 93 94 127 11-67-6-126-50-177 52 16 103 9 154-19-82-12-148-56-198-132Z" fill="none" stroke="#7e5f44" stroke-width="5" opacity=".45"/>
+<text x="90" y="235" fill="#7e5f44" font-family="Georgia,serif" font-size="38">Centro Estético</text>
+<text x="90" y="330" fill="#2d2926" font-family="Georgia,serif" font-size="68">Belleza, cuidado</text>
+<text x="90" y="405" fill="#2d2926" font-family="Georgia,serif" font-size="68">y bienestar.</text>
+<text x="94" y="478" fill="#756c64" font-family="Arial,sans-serif" font-size="25">Tratamientos faciales · corporales · capilares · masajes</text>
+</svg>
