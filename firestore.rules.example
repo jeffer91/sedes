@@ -4,7 +4,7 @@ service cloud.firestore {
     function isAdmin() {
       return request.auth != null
         && request.auth.token.email != null
-        && request.auth.token.email.matches('.*@itsqmet\\.edu\\.ec$');
+        && request.auth.token.email == '0401135306@itsqmet.edu.ec';
     }
 
     // Consulta puntual por cédula. No habilitar listados públicos.

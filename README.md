@@ -42,3 +42,8 @@ Cuenta Firebase requerida:
 - La contraseña de Firebase debe seguir el formato interno `UTET-<PIN>`.
 
 El PIN no se almacena literalmente en el código fuente. La cuenta debe existir en Firebase Authentication para que el acceso funcione.
+
+
+#### Requisito de Firebase Authentication
+
+El acceso administrador por usuario + PIN se valida realmente con Firebase Authentication. Para que funcione, Firebase debe tener habilitado **Email/Password** y debe existir la cuenta administrativa interna indicada por la aplicación. Las reglas de ejemplo de Firestore quedaron restringidas a esa identidad administrativa, no a todo el dominio institucional.

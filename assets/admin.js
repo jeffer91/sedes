@@ -71,11 +71,22 @@ el("loginForm").addEventListener("submit", async (event) => {
     await signInWithEmailAndPassword(auth, ADMIN_EMAIL, firebasePasswordFromPin(pin));
   } catch (error) {
     console.error(error);
-    showMessage(
-      loginMessage,
-      "No fue posible validar el acceso. Verifica el usuario, el PIN y la cuenta administrativa configurada en Firebase.",
-      "error"
-    );
+    const code = error?.code || "";
+    let message = "No fue posible validar el acceso.";
+
+    if (code === "auth/operation-not-allowed") {
+      message = "Firebase Authentication no tiene habilitado el proveedor Correo/Contraseña.";
+    } else if (
+      code === "auth/invalid-credential" ||
+      code === "auth/user-not-found" ||
+      code === "auth/wrong-password"
+    ) {
+      message = "La cuenta administrativa aún no existe en Firebase Authentication o la credencial configurada no coincide.";
+    } else if (code === "auth/too-many-requests") {
+      message = "Firebase bloqueó temporalmente nuevos intentos. Espera unos minutos antes de volver a ingresar.";
+    }
+
+    showMessage(loginMessage, message, "error");
   } finally {
     el("loginBtn").disabled = false;
     el("loginBtn").textContent = "Ingresar al panel";
