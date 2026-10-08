@@ -51,6 +51,7 @@ export function friendlyFirebaseError(error) {
     "auth/wrong-password": "Contraseña incorrecta.",
     "auth/popup-closed-by-user": "Se cerró la ventana de autenticación.",
     "auth/operation-not-allowed": "Este método de inicio de sesión no está habilitado en Firebase Authentication.",
+    "auth/configuration-not-found": "Firebase Authentication no está configurado para este proyecto.",
     "unavailable": "No fue posible conectar con Firebase. Revisa tu conexión e intenta nuevamente."
   };
   return map[code] || error?.message || "Ocurrió un error inesperado.";

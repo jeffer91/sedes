@@ -1,0 +1,35 @@
+name: Deploy Firebase rules
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify Firebase credential
+        shell: bash
+        env:
+          FIREBASE_SERVICE_ACCOUNT_UTET: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_UTET }}
+        run: |
+          if [ -z "$FIREBASE_SERVICE_ACCOUNT_UTET" ]; then
+            echo "::error::Falta el secret FIREBASE_SERVICE_ACCOUNT_UTET en GitHub."
+            exit 1
+          fi
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_UTET }}
+
+      - name: Install Firebase CLI
+        run: npm install --global firebase-tools
+
+      - name: Deploy Firestore rules
+        run: firebase deploy --only firestore:rules --project utet-4387a

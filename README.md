@@ -24,7 +24,7 @@ Campos principales:
 
 ## Administración
 
-El panel usa Firebase Authentication. Solo permite continuar en la interfaz a usuarios autenticados con correo `@itsqmet.edu.ec`.
+El panel usa Firebase Authentication y restringe el acceso a la identidad administrativa configurada.
 
 Para seguridad real también deben aplicarse las reglas de Firestore del archivo `firestore.rules.example` (o reglas equivalentes) desde Firebase Console.
 
@@ -47,3 +47,15 @@ El PIN no se almacena literalmente en el código fuente. La cuenta debe existir 
 #### Requisito de Firebase Authentication
 
 El acceso administrador por usuario + PIN se valida realmente con Firebase Authentication. Para que funcione, Firebase debe tener habilitado **Email/Password** y debe existir la cuenta administrativa interna indicada por la aplicación. Las reglas de ejemplo de Firestore quedaron restringidas a esa identidad administrativa, no a todo el dominio institucional.
+
+
+## Auditoría técnica 2026-10-08
+
+La auditoría automática confirmó:
+
+- GitHub Pages despliega correctamente.
+- La consulta puntual a `Estudiante` responde desde Firestore.
+- La colección `matriculas` actualmente permite lectura pública en el backend desplegado.
+- Firebase Authentication devuelve `CONFIGURATION_NOT_FOUND`, por lo que el panel administrador no puede autenticarse todavía.
+
+El repositorio incluye ahora `firestore.rules`, `firebase.json` y un workflow manual para desplegar las reglas. Para ejecutarlo de forma segura se requiere un **nuevo** service account de Firebase almacenado en el secret de GitHub `FIREBASE_SERVICE_ACCOUNT_UTET`. No reutilices credenciales que hayan sido expuestas previamente.

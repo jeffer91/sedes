@@ -74,8 +74,8 @@ el("loginForm").addEventListener("submit", async (event) => {
     const code = error?.code || "";
     let message = "No fue posible validar el acceso.";
 
-    if (code === "auth/operation-not-allowed") {
-      message = "Firebase Authentication no tiene habilitado el proveedor Correo/Contraseña.";
+    if (code === "auth/operation-not-allowed" || code === "auth/configuration-not-found") {
+      message = "Firebase Authentication no está configurado para este proyecto. Debe habilitarse Correo/Contraseña antes de usar el panel.";
     } else if (
       code === "auth/invalid-credential" ||
       code === "auth/user-not-found" ||
