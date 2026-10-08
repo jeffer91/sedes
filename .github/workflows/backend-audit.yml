@@ -1,0 +1,78 @@
+name: Audit Firebase backend
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/backend-audit.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Firestore public access
+        shell: bash
+        run: |
+          set +e
+          API_KEY="AIzaSyCaHf1C0BB0X_H3BDZ1o-UDAsPmLTjsZLA"
+          BASE="https://firestore.googleapis.com/v1/projects/utet-4387a/databases/(default)/documents"
+
+          test_get () {
+            label="$1"
+            url="$2"
+            code=$(curl -sS -o /tmp/body.json -w "%{http_code}" "$url?key=$API_KEY")
+            echo "=== $label ==="
+            echo "HTTP $code"
+            python - <<'PY'
+import json
+p='/tmp/body.json'
+try:
+    data=json.load(open(p))
+    if isinstance(data,dict):
+        if 'error' in data:
+            e=data['error']
+            print('ERROR:', e.get('status'), '-', e.get('message'))
+        else:
+            print('OK keys:', ', '.join(list(data.keys())[:10]))
+            if 'documents' in data:
+                print('documents:', len(data.get('documents',[])))
+    else:
+        print(type(data).__name__)
+except Exception as ex:
+    print('parse error:', ex)
+PY
+          }
+
+          test_get "Estudiante get" "$BASE/Estudiante/1500522055"
+          test_get "Matriculas list" "$BASE/matriculas"
+          test_get "Respuestas list" "$BASE/eleccionSedeComplexivo"
+
+      - name: Inspect Firebase Auth account/provider
+        shell: bash
+        run: |
+          set +e
+          API_KEY="AIzaSyCaHf1C0BB0X_H3BDZ1o-UDAsPmLTjsZLA"
+          code=$(curl -sS -o /tmp/auth.json -w "%{http_code}" \
+            -H "Content-Type: application/json" \
+            -d '{"identifier":"0401135306@itsqmet.edu.ec","continueUri":"https://jeffer91.github.io/sedes/administrador/"}' \
+            "https://identitytoolkit.googleapis.com/v1/accounts:createAuthUri?key=$API_KEY")
+          echo "=== Firebase Auth ==="
+          echo "HTTP $code"
+          python - <<'PY'
+import json
+try:
+    d=json.load(open('/tmp/auth.json'))
+    if 'error' in d:
+        e=d['error']
+        print('ERROR:', e.get('message'))
+    else:
+        print('registered:', d.get('registered'))
+        print('signin_methods:', d.get('signinMethods'))
+        print('provider_id:', d.get('providerId'))
+except Exception as ex:
+    print('parse error:', ex)
+PY
